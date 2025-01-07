@@ -30,7 +30,7 @@ This Python project is a web scraper for extracting product data from eBay. It u
 ## How to Use
 1. Run the script:
     ```bash
-    python ebay2.py
+    python ebay.py
     ```
 
 2. Input the search keyword(s) when prompted.
