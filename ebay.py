@@ -86,7 +86,7 @@ except:
 def extract_data():
     rows = driver.find_elements(By.CSS_SELECTOR, 'ul.srp-results > li div.s-item__wrapper')
 
-    data_rows = []  # Temporary storage for rows to sort later
+    data_rows = []  # Temporary storage for rows
 
     for row in rows:
         try:
@@ -173,7 +173,7 @@ filename = f"ebay_{keyword}_{serial_number}_{current_date}"
 header = ['Product Name', 'Price', 'Condition', 'Location', 'Seller']  # Add headers
 df = pd.DataFrame(all_data)
 df.to_excel(f"{filename}.xlsx", index=False, header=header, engine='openpyxl')
-# print(f"Data has been extracted, and saved to '{filename}.xlsx'\n")
+print(f"Data has been extracted, and saved to '{filename}.xlsx'\n")
 
 end_time = time.time()  # End timer
 elapsed_time = end_time - start_time
